@@ -240,6 +240,101 @@ button{
   </p>
  </div>
 </section>
+<!-- Chatbot Button -->
+<div id="chatbot-btn">💬</div>
+
+<!-- Chatbot Box -->
+<div id="chatbot-box">
+  <div id="chatbot-header">FuturePoint Chatbot</div>
+  <div id="chatbot-messages"></div>
+  <input type="text" id="chatbot-input" placeholder="Yahan message likhein..." />
+</div>
+
+<style>
+#chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563eb;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#chatbot-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  flex-direction: column;
+  font-family: Arial;
+}
+
+#chatbot-header {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#chatbot-messages {
+  height: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chatbot-input {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+}
+</style>
+
+<script>
+const btn = document.getElementById("chatbot-btn");
+const box = document.getElementById("chatbot-box");
+const input = document.getElementById("chatbot-input");
+const messages = document.getElementById("chatbot-messages");
+
+btn.onclick = () => {
+  box.style.display = box.style.display === "flex" ? "none" : "flex";
+};
+
+input.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const userMsg = input.value;
+    addMessage("You", userMsg);
+    botReply(userMsg);
+    input.value = "";
+  }
+});
+
+function addMessage(sender, text) {
+  const div = document.createElement("div");
+  div.innerHTML = `<b>${sender}:</b> ${text}`;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function botReply(msg) {
+  let reply = "Main aap ki madad ke liye hoon 😊";
+
+  msg = msg.toLowerCase();
+
+  if (msg.includes("job")) reply = "Latest jobs website par available hain.";
+  if (msg.includes("admission")) reply = "Admissions updates yahin milengi.";
+  if (msg.includes("contact")) reply = "Contact: info@futurepoint.pk";
+
+  setTimeout(() => addMessage("Bot", reply), 500);
+}
+</script>
 
 </body>
 </html>
