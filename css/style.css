@@ -230,4 +230,43 @@ footer p{
   font-size:26px;
  }
 }
+/* ===============================
+   APPLY FORM
+================================ */
+.apply-box{
+ margin-top:25px;
+ display:grid;
+ gap:15px;
+}
+
+.apply-box input,
+.apply-box select,
+.apply-box textarea{
+ width:100%;
+ padding:14px 18px;
+ border-radius:30px;
+ border:none;
+ outline:none;
+ background:rgba(255,255,255,0.08);
+ color:#fff;
+ font-size:15px;
+}
+
+.apply-box textarea{
+ border-radius:18px;
+ resize:none;
+}
+
+.apply-box input::placeholder,
+.apply-box textarea::placeholder{
+ color:#ccc;
+}
+
+.apply-box select{
+ color:#ccc;
+}
+
+.apply-box option{
+ color:#000;
+}
 
