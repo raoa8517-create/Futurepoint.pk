@@ -269,4 +269,9 @@ footer p{
 .apply-box option{
  color:#000;
 }
+.bg-img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
