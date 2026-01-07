@@ -7,6 +7,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+html,body{height:100%}
 body{background:#000;color:#fff}
 
 /* NAV */
@@ -21,17 +22,40 @@ header a:hover{color:#00ffff}
 
 /* SECTION */
 section{
- min-height:100vh;display:flex;align-items:center;justify-content:center;
- text-align:center;padding:40px;position:relative
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:40px;
+ position:relative;
 }
-.bg-video{position:absolute;width:100%;height:100%;object-fit:cover}
-.bg-img{background-size:cover;background-position:center}
+
+/* BACKGROUND IMAGE */
+.bg-img{
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+
+/* VIDEO */
+.bg-video{
+ position:absolute;
+ top:0;left:0;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ z-index:-1;
+}
 
 /* CARD */
 .card{
  background:rgba(0,0,0,0.7);
- padding:35px;border-radius:20px;
- max-width:1000px;width:100%
+ padding:35px;
+ border-radius:20px;
+ max-width:1000px;
+ width:100%;
+ z-index:1;
 }
 .card h1{font-size:36px;margin-bottom:15px}
 .card p,li{font-size:17px;line-height:1.8}
@@ -42,15 +66,16 @@ button{
  background:#00ffff;color:#000;font-size:15px;cursor:pointer
 }
 
-.list{
- text-align:left;margin-top:20px
-}
+.list{text-align:left;margin-top:20px}
 .list a{
  display:block;color:#00ffff;text-decoration:none;margin:8px 0
 }
 .list a:hover{text-decoration:underline}
 </style>
 </head>
+
+<body>
+
 <header>
  <div class="logo">PAK JOBS</div>
  <nav>
@@ -65,295 +90,65 @@ button{
  </nav>
 </header>
 
-<!-- 1 HOME -->
-<section id="home">
+<!-- HOME -->
+<section id="home" class="bg-img" style="background-image:url('images/home.png')">
  <video class="bg-video" autoplay muted loop>
   <source src="video/bg.mp4" type="video/mp4">
  </video>
  <div class="card">
   <h1>Pakistan Online Jobs Portal</h1>
-  <p>
-   Govt Jobs • Private Jobs • Online Apply • Admissions • Freelancing • AI Careers
-  </p>
+  <p>Govt Jobs • Private Jobs • Online Apply • Admissions • Freelancing • AI Careers</p>
  </div>
 </section>
 
-<!-- 2 GOVT JOBS -->
-<section id="govt" class="bg-img" style="background-image:url('images/govt.jpg')">
+<!-- GOVT -->
+<section id="govt" class="bg-img" style="background-image:url('images/govt.png')">
  <div class="card">
-  <h1>Government Jobs (Official)</h1>
-  <div class="list">
-   <a href="https://www.fpsc.gov.pk" target="_blank">FPSC Jobs</a>
-   <a href="https://www.ppsc.gop.pk" target="_blank">PPSC Jobs</a>
-   <a href="https://www.nts.org.pk" target="_blank">NTS Jobs</a>
-   <a href="https://www.joinpakarmy.gov.pk" target="_blank">Pakistan Army</a>
-   <a href="https://joinpaf.gov.pk" target="_blank">Pakistan Air Force</a>
-   <a href="https://www.joinpaknavy.gov.pk" target="_blank">Pakistan Navy</a>
-  </div>
+  <h1>Government Jobs</h1>
  </div>
 </section>
 
-<!-- 3 PRIVATE JOBS -->
-<section id="private" class="bg-img" style="background-image:url('images/private.jpg')">
+<!-- PRIVATE -->
+<section id="private" class="bg-img" style="background-image:url('images/private.png')">
  <div class="card">
   <h1>Private Jobs</h1>
-  <div class="list">
-   <a href="https://pk.indeed.com" target="_blank">Indeed Pakistan</a>
-   <a href="https://www.rozee.pk" target="_blank">Rozee.pk</a>
-   <a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a>
-   <a href="https://mustakbil.com" target="_blank">Mustakbil</a>
-  </div>
  </div>
 </section>
 
-<!-- 4 ADMISSIONS -->
-<section id="admission" class="bg-img" style="background-image:url('images/admission.jpg')">
+<!-- ADMISSION -->
+<section id="admission" class="bg-img" style="background-image:url('images/admission.png')">
  <div class="card">
-  <h1>Admissions (Schools / Colleges / Universities)</h1>
-  <div class="list">
-   <a href="https://www.hec.gov.pk" target="_blank">HEC Pakistan</a>
-   <a href="https://www.pu.edu.pk" target="_blank">Punjab University</a>
-   <a href="https://www.uet.edu.pk" target="_blank">UET</a>
-   <a href="https://www.vu.edu.pk" target="_blank">Virtual University</a>
-   <a href="https://www.allamaikbalopenuniversity.edu.pk" target="_blank">AIOU</a>
-  </div>
+  <h1>Admissions</h1>
  </div>
 </section>
 
-<!-- 5 APPLY -->
-<section id="apply" class="bg-img" style="background-image:url('images/apply.jpg')">
+<!-- APPLY -->
+<section id="apply" class="bg-img" style="background-image:url('images/jobs.png')">
  <div class="card">
-  <h1>How to Apply Online</h1>
-  <p>
-   Job apply کرنے کے لیے job link پر click کریں،  
-   official website پر form fill کریں اور submit کریں۔
-  </p>
+  <h1>Apply Online</h1>
  </div>
 </section>
 
-<!-- 6 FREELANCE -->
-<section id="freelance" class="bg-img" style="background-image:url('images/freelance.jpg')">
+<!-- FREELANCE -->
+<section id="freelance" class="bg-img" style="background-image:url('images/freelance.png')">
  <div class="card">
   <h1>Freelancing</h1>
-  <p>
-   Freelancing میں آپ گھر بیٹھے online skills کے ذریعے earning کرتے ہیں  
-   جیسے Web Design، Video Editing، AI Services، Data Entry۔
-  </p>
-  <div class="list">
-   <a href="https://www.fiverr.com" target="_blank">Fiverr</a>
-   <a href="https://www.upwork.com" target="_blank">Upwork</a>
-   <a href="https://www.freelancer.com" target="_blank">Freelancer</a>
-  </div>
  </div>
 </section>
 
-<!-- 7 AI -->
-<section id="ai" class="bg-img" style="background-image:url('images/ai.jpg')">
- <div class="card">
-  <h1>Artificial Intelligence (AI)</h1>
-  <p>
-   AI مستقبل کی سب سے powerful skill ہے۔  
-   AI سے Chatbots، Automation، Online Jobs اور Freelancing ممکن ہے۔
-  </p>
-  <div class="list">
-   <a href="https://www.coursera.org" target="_blank">AI Courses – Coursera</a>
-   <a href="https://www.udemy.com" target="_blank">AI Courses – Udemy</a>
-  </div>
- </div>
-</section>
-
-<!-- 8 ADMIN PANEL -->
-<section id="admin" class="bg-img" style="background-image:url('images/admin.jpg')">
- <div class="card">
-  <h1>Admin Panel (WordPress Style)</h1>
-  <p>
-   Admin panel کے ذریعے:
-   <br>• New Jobs Post  
-   <br>• Admissions Add  
-   <br>• Freelance Posts  
-   <br>• Content Update  
-  </p>
-
-  <p>
-   👉 Backend baad me connect hota hai (Database + Login)  
-   👉 Ye structure already ready hai
-  </p>
-
-  <button onclick="alert('Backend / Admin panel next step me connect hoga')">
-   Admin Login
-  </button>
- </div>
-</section>
-
-<!-- 9 DISCLAIMER -->
-<section>
- <div class="card">
-  <h1>Disclaimer</h1>
-  <p>
-   Ye website official job portals ke links provide karti hai۔  
-   Hum kisi job ke liye paisa demand nahi karte۔
-  </p>
- </div>
-</section>
-
-<!-- 10 FOOTER -->
-<section>
- <div class="card">
-  <h1>Pakistan Jobs Portal</h1>
-  <p>© 2026 All Rights Reserved</p>
- </div>
-</section>
-<link rel="stylesheet" href="style.css">
-<!-- APPLY JOB FORM -->
-<section id="apply" class="bg-img" style="background-image:url('images/apply.jpg')">
- <div class="card">
-  <h1>Online Job Apply Form</h1>
-  <p>
-   Job apply کرنے کے لیے نیچے دیا گیا form fill کریں۔  
-   (Demo version – backend بعد میں connect ہوگا)
-  </p>
-
-  <form class="apply-box">
-   <input type="text" placeholder="Full Name" required>
-   <input type="email" placeholder="Email Address" required>
-   <input type="text" placeholder="Mobile Number" required>
-   <input type="text" placeholder="City" required>
-
-   <select required>
-    <option value="">Select Job Type</option>
-    <option>Government Job</option>
-    <option>Private Job</option>
-    <option>Freelancing</option>
-    <option>AI Related Job</option>
-   </select>
-
-   <textarea rows="5" placeholder="Your Skills / Message"></textarea>
-
-   <button type="submit">Apply Now</button> 
-  </form>
-
-  <p style="margin-top:15px;font-size:14px;opacity:0.7">
-   ⚠️ Warning: ہم کسی بھی job کے لیے پیسے نہیں مانگتے۔
-  </p>
- </div>
-</section>
-<!-- Chatbot Button -->
-<div id="chatbot-btn">💬</div>
-
-<!-- Chatbot Box -->
-<div id="chatbot-box">
-  <div id="chatbot-header">FuturePoint Chatbot</div>
-  <div id="chatbot-messages"></div>
-  <input type="text" id="chatbot-input" placeholder="Yahan message likhein..." />
-</div>
-
-<style>
-#chatbot-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #2563eb;
-  color: #fff;
-  padding: 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-#chatbot-box {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 300px;
-  background: #fff;
-  border: 1px solid #ccc;
-  display: none;
-  flex-direction: column;
-  font-family: Arial;
-}
-
-#chatbot-header {
-  background: #2563eb;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-}
-
-#chatbot-messages {
-  height: 200px;
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 14px;
-}
-
-#chatbot-input {
-  border: none;
-  border-top: 1px solid #ccc;
-  padding: 10px;
-  outline: none;
-}
-</style>
-
-<script>
-const btn = document.getElementById("chatbot-btn");
-const box = document.getElementById("chatbot-box");
-const input = document.getElementById("chatbot-input");
-const messages = document.getElementById("chatbot-messages");
-
-btn.onclick = () => {
-  box.style.display = box.style.display === "flex" ? "none" : "flex";
-};
-
-input.addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    const userMsg = input.value;
-    addMessage("You", userMsg);
-    botReply(userMsg);
-    input.value = "";
-  }
-});
-
-function addMessage(sender, text) {
-  const div = document.createElement("div");
-  div.innerHTML = `<b>${sender}:</b> ${text}`;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
-}
-
-function botReply(msg) {
-  let reply = "Main aap ki madad ke liye hoon 😊";
-
-  msg = msg.toLowerCase();
-
-  if (msg.includes("job")) reply = "Latest jobs website par available hain.";
-  if (msg.includes("admission")) reply = "Admissions updates yahin milengi.";
-  if (msg.includes("contact")) reply = "Contact: https://jobs.punjab.gov.pk/";
-
-  setTimeout(() => addMessage("Bot", reply), 500);
-}
-</script>
-<!-- Tawk.to Live Chat -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),
-    s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<section id="home" class="bg-img" style="background-image:url('images/home.png')">
-<section id="govt" class="bg-img" style="background-image:url('images/govt.png')">
-<section id="private" class="bg-img" style="background-image:url('images/private.png')">
-<section id="admission" class="bg-img" style="background-image:url('images/admission.png')">
-<section id="apply" class="bg-img" style="background-image:url('images/jobs.png')">
-<section id="freelance" class="bg-img" style="background-image:url('images/freelance.png')">
+<!-- AI -->
 <section id="ai" class="bg-img" style="background-image:url('images/ai.png')">
+ <div class="card">
+  <h1>Artificial Intelligence</h1>
+ </div>
+</section>
+
+<!-- ADMIN -->
 <section id="admin" class="bg-img" style="background-image:url('images/admin.png')">
+ <div class="card">
+  <h1>Admin Panel</h1>
+ </div>
+</section>
 
 </body>
 </html>
-
