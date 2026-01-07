@@ -68,7 +68,7 @@ section{
 
 /* ✅ BACKGROUND IMAGE FIX HERE */
 .bg-img{
- background-image: url("/image/1.png");
+ background-image: url("image/1.png");
  background-size:cover;
  background-position:center;
  background-repeat:no-repeat;
